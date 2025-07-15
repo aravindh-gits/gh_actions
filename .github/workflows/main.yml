@@ -1,6 +1,9 @@
 name: action_workflow
 
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - feature
 
 jobs:
   build:
