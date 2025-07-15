@@ -1,9 +1,6 @@
 name: action_workflow
 
-on:
-  push:
-    branches:
-      - feature
+on: pull_request
 
 jobs:
   build:
