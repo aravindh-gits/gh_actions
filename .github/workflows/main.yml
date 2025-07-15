@@ -17,6 +17,10 @@ jobs:
       - name: run_script
         run: |
           python3.9 src/print_value.py
+  
+  print:  
+    runs-on: ubuntu-latest
+    steps:
       - name: print_var
         run: |
           echo "Variable: ${{ vars.username }}"
