@@ -1,0 +1,19 @@
+name: action_workflow
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code_checkout
+        uses: actions/checkout@v3
+  
+      - name: install_python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: run_script
+        run: |
+          python3.9 src/print_value.py
