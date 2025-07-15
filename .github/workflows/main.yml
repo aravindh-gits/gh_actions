@@ -18,7 +18,8 @@ jobs:
         run: |
           python3.9 src/print_value.py
   
-  print:  
+  print:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: print_var
