@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-        
+
       - name: list statement
-        run: ls -lstr
+        run: ls -lstr src
