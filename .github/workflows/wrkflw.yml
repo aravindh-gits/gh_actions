@@ -12,4 +12,4 @@ jobs:
         run: |
           cd src
           ls -lstr
-          ./print_value.py
+          python3 print_value.py
