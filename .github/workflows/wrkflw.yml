@@ -1,0 +1,8 @@
+on: workflow_dispatch
+
+jobs:
+  printing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo statement
+        run: echo "Thats all"
