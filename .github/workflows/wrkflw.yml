@@ -5,5 +5,5 @@ jobs:
   printing:
     runs-on: ubuntu-latest
     steps:
-      - name: echo statement
-        run: echo "Thats all"
+      - name: list statement
+        run: ls -lstr
