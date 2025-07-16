@@ -9,4 +9,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: list statement
-        run: ls -lstr src
+        run: |
+          cd src
+          ls -lstr
+          ./print_value.py
