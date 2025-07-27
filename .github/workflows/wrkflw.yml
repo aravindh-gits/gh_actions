@@ -13,15 +13,26 @@ jobs:
           whoami
           cd src
           ls -lstr
+          
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-script
+          path: src/print_value.py
 
   newdir:
     needs: printing
     runs-on: ubuntu-latest
     steps:
+      - name: download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: my-script
+          
       - name: create new dir
         run: |
           mkdir temp
-          cp /src/print_value.py /temp/newfile.py
+          cp print_value.py temp/newfile.py
           ls -lstr
-          python3 newfile.py
+          python3 temp/newfile.py
       
