@@ -13,4 +13,14 @@ jobs:
           whoami
           cd src
           ls -lstr
-          python3 print_value.py
+
+  newdir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create new dir
+        run: |
+          mkdir temp
+          cp /src/print_value.py /temp/newfile.py
+          ls -lstr
+          python3 newfile.py
+      
