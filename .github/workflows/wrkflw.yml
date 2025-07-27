@@ -15,6 +15,7 @@ jobs:
           ls -lstr
 
   newdir:
+    needs: printing
     runs-on: ubuntu-latest
     steps:
       - name: create new dir
